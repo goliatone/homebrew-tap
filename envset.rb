@@ -5,33 +5,33 @@
 class Envset < Formula
   desc "run commands in an environment defined using a ini configuration file."
   homepage "https://github.com/goliatone/go-envset"
-  version "0.0.9"
+  version "0.0.10"
   license "MIT"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/goliatone/go-envset/releases/download/v0.0.9/envset_0.0.9_darwin_x86_64.tar.gz"
-      sha256 "22b9287d15808d60e56af9d31047d2503900de9433085682e084089bdbf58c4d"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/goliatone/go-envset/releases/download/v0.0.9/envset_0.0.9_darwin_arm64.tar.gz"
-      sha256 "95b07eb827e9c37029df245b27ba2ee2d9d563c3d31c1de8a88835f6dcd148ce"
+      url "https://github.com/goliatone/go-envset/releases/download/v0.0.10/envset_0.0.10_darwin_arm64.tar.gz"
+      sha256 "52a41ae661b914a4b5690d7565c8f88490bc53294534950467393455264731a4"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/goliatone/go-envset/releases/download/v0.0.10/envset_0.0.10_darwin_x86_64.tar.gz"
+      sha256 "cea6abd527496f8dd7717c927e6a733e4342ba48f389458892a724ecaf796fc0"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goliatone/go-envset/releases/download/v0.0.9/envset_0.0.9_linux_armv6.tar.gz"
-      sha256 "f49a0d88ca47de5964b24e691482643c21296a104a3e7e19deaabc4670d42e03"
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goliatone/go-envset/releases/download/v0.0.9/envset_0.0.9_linux_arm64.tar.gz"
-      sha256 "d85b6e3281e938248184801a1ad0dc0b82cbb54731162255514a0feb0c902a0b"
+      url "https://github.com/goliatone/go-envset/releases/download/v0.0.10/envset_0.0.10_linux_armv6.tar.gz"
+      sha256 "44788f5ca4a8c4675dbe7f269197cdeacef2d69adf1eb8544012cc1bd2224a86"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goliatone/go-envset/releases/download/v0.0.9/envset_0.0.9_linux_x86_64.tar.gz"
-      sha256 "f6a75c4429240c43cd9efa5622be8ed69997e49050d0d7650ac8ae191dc0a88c"
+      url "https://github.com/goliatone/go-envset/releases/download/v0.0.10/envset_0.0.10_linux_x86_64.tar.gz"
+      sha256 "8065cfd7eb427905d5d2f44222f5ad898251cabed1fbc3ef280eb7dda9f0a6d5"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goliatone/go-envset/releases/download/v0.0.10/envset_0.0.10_linux_arm64.tar.gz"
+      sha256 "54b1b9937ef0e4729266f3f640972484582912c34d97d70c5ed8b00233072b31"
     end
   end
 
