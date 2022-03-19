@@ -5,21 +5,21 @@
 class Envset < Formula
   desc "run commands in an environment defined using a ini configuration file."
   homepage "https://github.com/goliatone/go-envset"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goliatone/go-envset/releases/download/v0.5.0/envset_0.5.0_darwin_x86_64.tar.gz"
-      sha256 "92460cd348ecf42ec1aae01fa61b71121797fcf717df4797db147c847325171c"
+      url "https://github.com/goliatone/go-envset/releases/download/v0.5.1/envset_0.5.1_darwin_x86_64.tar.gz"
+      sha256 "44eb89ecf24c05d10f40c9739eaf88cd40b6f3dca29efdd239e27d2c47ff482f"
 
       def install
         bin.install "envset"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goliatone/go-envset/releases/download/v0.5.0/envset_0.5.0_darwin_arm64.tar.gz"
-      sha256 "206d8086dff1d59d1a73e93ea63d490eac4de0879f26b073457ad1d025effc99"
+      url "https://github.com/goliatone/go-envset/releases/download/v0.5.1/envset_0.5.1_darwin_arm64.tar.gz"
+      sha256 "c4b27c7eae58cc6d147f5e3e1a3d55b36122230fd960815d7106fb1413478a8c"
 
       def install
         bin.install "envset"
@@ -28,25 +28,25 @@ class Envset < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/goliatone/go-envset/releases/download/v0.5.1/envset_0.5.1_linux_armv6.tar.gz"
+      sha256 "d0d5395f127bd402c033d14333a6d579e02926ef8cec975f5b0ce2a8803a0641"
+
+      def install
+        bin.install "envset"
+      end
+    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goliatone/go-envset/releases/download/v0.5.0/envset_0.5.0_linux_arm64.tar.gz"
-      sha256 "3b96b29939bd4329dd29fae044e522eb03ab2e88ea39b369530d25124cfb2054"
+      url "https://github.com/goliatone/go-envset/releases/download/v0.5.1/envset_0.5.1_linux_arm64.tar.gz"
+      sha256 "4de258f1696bddb68a0cb469a4c093086811896cb225baaa8a1fb73d9e60d9b0"
 
       def install
         bin.install "envset"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goliatone/go-envset/releases/download/v0.5.0/envset_0.5.0_linux_x86_64.tar.gz"
-      sha256 "89c95b547f4c496d9e1c485295d7c7819b714ecbc9633654eb595ee75c12dce3"
-
-      def install
-        bin.install "envset"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goliatone/go-envset/releases/download/v0.5.0/envset_0.5.0_linux_armv6.tar.gz"
-      sha256 "df0609620f151500e839201bf75595d0056b8342d7e31d328571bb9618cb6622"
+      url "https://github.com/goliatone/go-envset/releases/download/v0.5.1/envset_0.5.1_linux_x86_64.tar.gz"
+      sha256 "ee00a9c2f1932df1865109e3f29ab5295cfee371282481e2b6268830bc758224"
 
       def install
         bin.install "envset"
