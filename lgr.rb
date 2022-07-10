@@ -5,21 +5,21 @@
 class Lgr < Formula
   desc "pretty output for terminal scripts."
   homepage "https://github.com/goliatone/lgr"
-  version "0.0.12"
+  version "0.0.13"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/goliatone/lgr/releases/download/v0.0.12/lgr_0.0.12_darwin_arm64.tar.gz"
-      sha256 "1db14ab589e5082a0e226762dc54ab7117d389dac8f9070429300defdd9898e2"
+    if Hardware::CPU.intel?
+      url "https://github.com/goliatone/lgr/releases/download/v0.0.13/lgr_0.0.13_darwin_x86_64.tar.gz"
+      sha256 "58d650dfd5616da466ff7b628ddb627b57a4db526928b1fe9a6a16ec1ff17a14"
 
       def install
         bin.install "lgr"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goliatone/lgr/releases/download/v0.0.12/lgr_0.0.12_darwin_x86_64.tar.gz"
-      sha256 "2be13bd9e0fb0b4ac85a3d430adfdef286586cb2f78a7351bd882a9ba6e9c800"
+    if Hardware::CPU.arm?
+      url "https://github.com/goliatone/lgr/releases/download/v0.0.13/lgr_0.0.13_darwin_arm64.tar.gz"
+      sha256 "dfc56b2dfe432a5314a514ae67ddd89fdcc912080f0f53c0f6b0a393ef1f6d70"
 
       def install
         bin.install "lgr"
@@ -28,25 +28,25 @@ class Lgr < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/goliatone/lgr/releases/download/v0.0.12/lgr_0.0.12_linux_x86_64.tar.gz"
-      sha256 "cf4cb84578b20d563068a59c2a4c90a5bc737d7cbb12a8dac78c3d307521a031"
-
-      def install
-        bin.install "lgr"
-      end
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goliatone/lgr/releases/download/v0.0.12/lgr_0.0.12_linux_armv6.tar.gz"
-      sha256 "031ddee43f001dba311039a451ee3c2c849105d9246d4b73b3fc179a8ecf7b77"
+      url "https://github.com/goliatone/lgr/releases/download/v0.0.13/lgr_0.0.13_linux_armv6.tar.gz"
+      sha256 "8159205b06be95463bda946eda42e99751299dd6e04bca3cbefa6c5f3429e396"
 
       def install
         bin.install "lgr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goliatone/lgr/releases/download/v0.0.12/lgr_0.0.12_linux_arm64.tar.gz"
-      sha256 "1140bdb25b933b46d48f65493e82545c9b3342dbb1b345a1e0a9882acff1391a"
+      url "https://github.com/goliatone/lgr/releases/download/v0.0.13/lgr_0.0.13_linux_arm64.tar.gz"
+      sha256 "d569428b93c09c3ecc5fbbf8b30fc25486df4adedfa3557c1d6a1bc9ed7ce94a"
+
+      def install
+        bin.install "lgr"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/goliatone/lgr/releases/download/v0.0.13/lgr_0.0.13_linux_x86_64.tar.gz"
+      sha256 "cbbea6c6c999ec80cf0c3dfdefa3ba96cbedc6b87fd5d353955c6a6b237ce08b"
 
       def install
         bin.install "lgr"
