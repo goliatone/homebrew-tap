@@ -5,21 +5,21 @@
 class Hashid < Formula
   desc "deterministic globally unique identifiers."
   homepage "https://github.com/goliatone/hashid"
-  version "0.0.6"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/goliatone/hashid/releases/download/v0.0.6/hashid_Darwin_x86_64.tar.gz"
-      sha256 "90fa279bb7ca915b8a3a3c12957fc11e83e2c7bee65284778fb8fd58648de91b"
+    if Hardware::CPU.intel?
+      url "https://github.com/goliatone/hashid/releases/download/v0.1.0/hashid_Darwin_x86_64.tar.gz"
+      sha256 "62933ddae464617c6c0e2cf35d2f69224d0f3a5054d87279525451c71fe279ea"
 
       def install
         bin.install "hashid"
       end
     end
-    on_arm do
-      url "https://github.com/goliatone/hashid/releases/download/v0.0.6/hashid_Darwin_arm64.tar.gz"
-      sha256 "4ad6c1e8043c8f37ed087dee3680e3bf70e933763120c856a34816235c7991bf"
+    if Hardware::CPU.arm?
+      url "https://github.com/goliatone/hashid/releases/download/v0.1.0/hashid_Darwin_arm64.tar.gz"
+      sha256 "f0a0a26ab78ca50b445ebaca281e856a210488b16f417acc9422e287dbe6bce4"
 
       def install
         bin.install "hashid"
@@ -28,30 +28,30 @@ class Hashid < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goliatone/hashid/releases/download/v0.0.6/hashid_Linux_x86_64.tar.gz"
-        sha256 "104437f346bd86c46ed95e817811b629ac809ae95828031e78d17d61299e8b83"
+        url "https://github.com/goliatone/hashid/releases/download/v0.1.0/hashid_Linux_x86_64.tar.gz"
+        sha256 "cda2e77e994563dc4016a4ebcd8d90fa234255ebd9d5571cef04380f8e8a9f22"
 
         def install
           bin.install "hashid"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/goliatone/hashid/releases/download/v0.0.6/hashid_Linux_armv6.tar.gz"
-        sha256 "2308bf641ed5aa75cfeb4b39c36c53e21767db0e3777441c4e82517e2d895d0b"
+        url "https://github.com/goliatone/hashid/releases/download/v0.1.0/hashid_Linux_armv6.tar.gz"
+        sha256 "add78adbd78b1bb13d97ed87e89985cbf5988e2454a49bd9bf37d1fb572e2e71"
 
         def install
           bin.install "hashid"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goliatone/hashid/releases/download/v0.0.6/hashid_Linux_arm64.tar.gz"
-        sha256 "68d20b4072247a091d5a12db06d18f97cdde2afce67eb036acf7bfb925eba8cd"
+        url "https://github.com/goliatone/hashid/releases/download/v0.1.0/hashid_Linux_arm64.tar.gz"
+        sha256 "4eb83b1d8a6b087c5c81048a0aabbea191302cb945b412f7fb31cf549d35efae"
 
         def install
           bin.install "hashid"
