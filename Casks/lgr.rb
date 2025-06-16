@@ -2,7 +2,7 @@
 cask "lgr" do
   desc "pretty output for terminal scripts."
   homepage "https://github.com/goliatone/lgr"
-  version "0.1.10"
+  version "0.1.13"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,25 +12,29 @@ cask "lgr" do
 
   on_macos do
     on_intel do
-      url "https://github.com/goliatone/lgr/releases/download/v0.1.10/lgr_Darwin_x86_64.tar.gz"
-      sha256 "413b5f3f0a9051857eee2ed219a6e2e86aa38f98c785945ecd25787edff96f7e"
+      url "https://github.com/goliatone/lgr/releases/download/v0.1.13/lgr_Darwin_x86_64.tar.gz"
+      sha256 "f71451ecd049fc0c749a8fd9d65f8b028ba0daa803f2c00c935a5a55c8284afc"
     end
     on_arm do
-      url "https://github.com/goliatone/lgr/releases/download/v0.1.10/lgr_Darwin_arm64.tar.gz"
-      sha256 "5ee4ac58bd56803ed5fa1c33779f5adae69f89f2a523f47c97c03b11a20eeec0"
+      url "https://github.com/goliatone/lgr/releases/download/v0.1.13/lgr_Darwin_arm64.tar.gz"
+      sha256 "52f9e6e54599dd1f2c2bcc9a6e7115c52bdd5d4edf80623f9ca5935fb94d8b5d"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/goliatone/lgr/releases/download/v0.1.10/lgr_Linux_x86_64.tar.gz"
-      sha256 "292de45647f5ddcc44aa40cbc21d6f800631d066d5ddbedfcddd8e8366dd5ad9"
+      url "https://github.com/goliatone/lgr/releases/download/v0.1.13/lgr_Linux_x86_64.tar.gz"
+      sha256 "64c817e4bef4aa43d78a876a624a77f276bf80af737a8e9e5d684dfe32d44ce6"
     end
     on_arm do
-      url "https://github.com/goliatone/lgr/releases/download/v0.1.10/lgr_Linux_arm64.tar.gz"
-      sha256 "4e3effa66d202291871fbffee4083235771ceeab9c32038d4c1895070abb75ae"
+      url "https://github.com/goliatone/lgr/releases/download/v0.1.13/lgr_Linux_arm64.tar.gz"
+      sha256 "bfb30cb3cf1eccf7b4f8d3d7873d7977384787c472357160cf2b8970c2d47c87"
     end
   end
+
+  conflicts_with formula: [
+      "lgr",
+    ]
 
   # No zap stanza required
 end
