@@ -5,21 +5,21 @@
 class Cascade < Formula
   desc "managed release cycles."
   homepage "https://github.com/goliatone/cascade"
-  version "0.1.44"
+  version "0.1.45"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goliatone/cascade/releases/download/v0.1.44/cascade_Darwin_x86_64.tar.gz"
-      sha256 "eb916b5b7e791f9ae386854eb945db40ba397150ae553832daa76c41652a2f11"
+      url "https://github.com/goliatone/cascade/releases/download/v0.1.45/cascade_0.1.45_darwin_amd64.tar.gz"
+      sha256 "ed282397e27604f93488b15e0b222831ee6226e05761d5b247c88797721644d9"
 
       def install
         bin.install "cascade"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goliatone/cascade/releases/download/v0.1.44/cascade_Darwin_arm64.tar.gz"
-      sha256 "df10b0da59cb3d1361408c66b4b2e002af59e8eb50b6a384f91353602adf74f3"
+      url "https://github.com/goliatone/cascade/releases/download/v0.1.45/cascade_0.1.45_darwin_arm64.tar.gz"
+      sha256 "03143843beb17504a67794c5ae1609bb32dc3c86152186039b11ff9e2f2b7e0d"
 
       def install
         bin.install "cascade"
@@ -29,22 +29,22 @@ class Cascade < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goliatone/cascade/releases/download/v0.1.44/cascade_Linux_x86_64.tar.gz"
-      sha256 "2825a686b3370b39bd89bb78c9c95e8df63a131b27a74b5ed37a35946278ec82"
+      url "https://github.com/goliatone/cascade/releases/download/v0.1.45/cascade_0.1.45_linux_amd64.tar.gz"
+      sha256 "6fc0f6fee784adfaf6ac45360dd93d20b1eabff39773c2aebc8604fe625d1f82"
       def install
         bin.install "cascade"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goliatone/cascade/releases/download/v0.1.44/cascade_Linux_armv6.tar.gz"
-      sha256 "45b23001d52ff14d0435fd5712ed9ab54c9a2304568826851845c62c07c790bf"
+      url "https://github.com/goliatone/cascade/releases/download/v0.1.45/cascade_0.1.45_linux_arm.tar.gz"
+      sha256 "5e3c97bd91936039c795adefa5cae6a964ac5111984e84673a5d0519db2bdc91"
       def install
         bin.install "cascade"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goliatone/cascade/releases/download/v0.1.44/cascade_Linux_arm64.tar.gz"
-      sha256 "4d7d03ab4ff1e8982273fc55ded4ca48fdac2035e26667e354d259c72ec9b2fe"
+      url "https://github.com/goliatone/cascade/releases/download/v0.1.45/cascade_0.1.45_linux_arm64.tar.gz"
+      sha256 "5970bcf271858b0138eeeea53fb1a6b47028c0eb8286d01f7dee1e25aaef25c4"
       def install
         bin.install "cascade"
       end
