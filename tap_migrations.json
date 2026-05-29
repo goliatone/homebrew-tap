@@ -1,3 +1,7 @@
 {
-  "webcap": "goliatone/tap/webcap"
+  "webcap": "goliatone/tap/webcap",
+  "envset": "goliatone/tap/envset",
+  "hashid": "goliatone/tap/hashid",
+  "cascade": "goliatone/tap/cascade",
+  "lgr": "goliatone/tap/lgr"
 }
