@@ -5,21 +5,21 @@
 class Webcap < Formula
   desc "Browser screenshot, image diff, workflow report, and MCP CLI."
   homepage "https://github.com/goliatone/webcap"
-  version "0.6.1"
+  version "0.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goliatone/webcap/releases/download/v0.6.1/webcap_0.6.1_darwin_x86_64.tar.gz"
-      sha256 "d5685e82ced193fdd7e45a2037cb14e0ba9c6bb1d361b1d75ca47dfe218d3321"
+      url "https://github.com/goliatone/webcap/releases/download/v0.7.0/webcap_0.7.0_darwin_x86_64.tar.gz"
+      sha256 "acba654da8f4a53624dc100e2500ee00ed1349efff4e5ef36cc98621fec413d8"
 
       define_method(:install) do
         bin.install "webcap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goliatone/webcap/releases/download/v0.6.1/webcap_0.6.1_darwin_arm64.tar.gz"
-      sha256 "76b847d75ff9cc2ff580920c86697157a1a6fb8cdba5b87b609ee77818ef8eee"
+      url "https://github.com/goliatone/webcap/releases/download/v0.7.0/webcap_0.7.0_darwin_arm64.tar.gz"
+      sha256 "e3766b0c9681f47b25771118ca3cb40afaaae0ce8240dde3aed0222217c61cac"
 
       define_method(:install) do
         bin.install "webcap"
@@ -29,22 +29,22 @@ class Webcap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goliatone/webcap/releases/download/v0.6.1/webcap_0.6.1_linux_x86_64.tar.gz"
-      sha256 "a90afbe9677839478552fc2efad9bae0c8a66a8e2af5555e633e1127e316c30f"
+      url "https://github.com/goliatone/webcap/releases/download/v0.7.0/webcap_0.7.0_linux_x86_64.tar.gz"
+      sha256 "6206fd183da449d9db543358b26941df2e0cda0bdf43f402c928b28ba895a389"
       define_method(:install) do
         bin.install "webcap"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goliatone/webcap/releases/download/v0.6.1/webcap_0.6.1_linux_armv6.tar.gz"
-      sha256 "6e4c954d8d99aae25b36f49f29c5f4fb1abe64fdbc8dfef013d9ddb764dc79b3"
+      url "https://github.com/goliatone/webcap/releases/download/v0.7.0/webcap_0.7.0_linux_armv6.tar.gz"
+      sha256 "61d1c6b463be7e23be9b431ed29eb6cb18152e813e5500d9b68019bcbf3dd423"
       define_method(:install) do
         bin.install "webcap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goliatone/webcap/releases/download/v0.6.1/webcap_0.6.1_linux_arm64.tar.gz"
-      sha256 "0e5c3d5bcd3f3f77a8ed13aa655defb797a426c46caefbd8b038009da6b25919"
+      url "https://github.com/goliatone/webcap/releases/download/v0.7.0/webcap_0.7.0_linux_arm64.tar.gz"
+      sha256 "468fa93df9bd1a838d8d28421c1c8ddc5cf6335964433d7ea53b1087da6a7a70"
       define_method(:install) do
         bin.install "webcap"
       end
