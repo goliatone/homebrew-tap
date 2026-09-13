@@ -7,25 +7,25 @@ cask "switchd" do
     end
   end
 
-  version "0.8.2"
+  version "0.8.3"
 
   on_macos do
     on_arm do
-      sha256 "1014ac49fb0126d8dc9c1024759d5aa3069fbffc71a82db2a6043cfe28bade10"
+      sha256 "56f0b09a223cf26e2e2369a6ebe758adc3b95ba2d6d4df6daf6d0c349ffdd206"
       url "https://github.com/goliatone/switchboard-hub/releases/download/v#{version}/switchd_Darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "c517ba3a4f0d03efc64b3c729fa6b6384d901ddf3db68aa7e87766960b0fe401"
+      sha256 "5500b977085b28aaf7022b8d66d924db2b6dcc5870739f2f098ed50faf03d146"
       url "https://github.com/goliatone/switchboard-hub/releases/download/v#{version}/switchd_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "1d66e8643225979ff8e279702e8d9e4870b1a19395ae88e42c35329274367712"
+      sha256 "47dc3f21284a2bad662ef6acede825e50d9bf3f62a852e9c58a2745acefad037"
       url "https://github.com/goliatone/switchboard-hub/releases/download/v#{version}/switchd_Linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "e590e87ed0bb12276fb237bfc80425216b0a302a5a660ac026c65667575be189"
+      sha256 "c63f76263d1bcce5442f73271cc8b2feee2c63475a5ab9c965c77ec29399dd8e"
       url "https://github.com/goliatone/switchboard-hub/releases/download/v#{version}/switchd_Linux_x86_64.tar.gz"
     end
   end
