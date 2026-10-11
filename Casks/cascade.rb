@@ -7,25 +7,25 @@ cask "cascade" do
     end
   end
 
-  version "0.9.2"
+  version "0.9.3"
 
   on_macos do
     on_arm do
-      sha256 "a88e3a114dc39403a46def5a833ed37d8fadde94dfe76d4386fcd3eb0b0e9311"
+      sha256 "c25ec2e9d71a371c32db3d5fd23dda366216af56150b3e09b82df9f4b12d2c5b"
       url "https://github.com/goliatone/cascade/releases/download/v#{version}/cascade_Darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "cc6ffbac9fdb8aa88d9d49f75b424a325f125d491ba328c778770a7c14956687"
+      sha256 "6c299d48f83f3979da3b6efcc742d5a42edff2c37a6eed171ffe75c8df7d0165"
       url "https://github.com/goliatone/cascade/releases/download/v#{version}/cascade_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "ea141419fc645d3689088abee9fa25d65cad559f35fcd26b4665a5463ee4c376"
+      sha256 "a6a824453e34b804e3ec0717303db7e80596c5afa909a7f0a7feafc5d41fd7e7"
       url "https://github.com/goliatone/cascade/releases/download/v#{version}/cascade_Linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "46c0ba76ab6c681b641c813c30733da00c4933949faa34735ad3839d0dbec522"
+      sha256 "95bae6406b27f160b47687af91ca459477c5ad3fdc914011eae8844b4ff5d966"
       url "https://github.com/goliatone/cascade/releases/download/v#{version}/cascade_Linux_x86_64.tar.gz"
     end
   end
